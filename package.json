@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-favicon": "0.0.18",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -17,7 +18,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint:js": "eslint ./src",
+    "lint:css": "stylelint ./src",
+    "lint:html": "linthtml ./src",
+    "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\" \"npm run lint:html\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +40,12 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "@linthtml/linthtml": "^0.4.1",
+    "@mate-academy/linthtml-config": "0.0.1",
+    "@mate-academy/stylelint-config": "0.0.9",
+    "concurrently": "^5.2.0",
+    "gh-pages": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.6.1"
   }
 }

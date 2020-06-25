@@ -1,2 +1,2 @@
 # abz-agency test task
-- This is a landing page made by ogsevko 
+- This landing page was made by Yaroslav Andriyenko for abz-agency
